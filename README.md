@@ -19,7 +19,7 @@
 
 #### Installation
 
-Download `wilmersdorf-theme.el` and put it under `~/.emacs.d/themes/`
+Download `acme-theme.el` and put it under `~/.emacs.d/themes/`
 (or `~/.config/emacs/themes/`), then add these lines to your
 `init.el`:
 

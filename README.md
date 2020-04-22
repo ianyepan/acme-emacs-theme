@@ -33,7 +33,7 @@ Download `wilmersdorf-theme.el` and put it under `~/.emacs.d/themes/`
 
 #### Screenshots
 
-![alt text](./screenshots/acme.png)
+![alt text](./acme.png)
 
 Copyright© 2020 Ian Y.E. Pan
 

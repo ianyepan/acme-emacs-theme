@@ -1,4 +1,4 @@
-;;; acme-theme.el --- A color theme for Emacs based on Acme
+;;; acme-theme.el --- A color theme for Emacs based on Acme & Sam from Plan 9
 
 ;; Copyright (C) 2020 Ian Yi-En Pan
 
@@ -47,7 +47,7 @@
     ("blue"          . "#004488")
     ("blue-light"    . "#e1faff")
     ("purple"        . "#555598")
-    ("purple-light"  . "#e7fcf7")))
+    ("purple-light"  . "#ffeaff")))
 
 (defmacro acme/with-color-variables (&rest body)
   "`let' bind all colors defined in `acme-colors-alist' around BODY.
@@ -73,10 +73,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(default                                      ((t (:foreground ,fg :background ,bg))))
    `(cursor                                       ((t (:foreground ,bg :background ,fg))))
    `(escape-glyph                                 ((t (:foreground ,cyan-light :bold nil))))
-   `(fringe                                       ((t (:foreground ,fg))))
+   `(fringe                                       ((t (:foreground ,fg :background ,bg))))
    `(line-number                                  ((t (:foreground ,fg :background ,bg-alt2))))
    `(line-number-current-line                     ((t (:foreground ,fg :background ,bg-alt2))))
-   `(header-line                                  ((t (:foreground ,purple :background ,purple-light :box (:line-width -1 :style released-button)))))
+   `(header-line                                  ((t (:foreground ,fg :background ,cyan-light :box t))))
    `(highlight                                    ((t (:background ,highlight))))
    `(success                                      ((t (:foreground ,green :weight normal))))
    `(warning                                      ((t (:foreground ,red :weight normal))))
@@ -126,8 +126,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(font-lock-keyword-face                       ((t (:foreground ,blue :weight bold)))) ; if, else, for, while, return...
    `(font-lock-type-face                          ((t (:foreground ,fg :weight bold)))) ; int, float, string, void...
    `(font-lock-constant-face                      ((t (:foreground ,fg :weight bold)))) ; NULL, nullptr, true, false...
-   `(font-lock-comment-face                       ((t (:foreground ,green :italic t))))
-   `(font-lock-comment-delimiter-face             ((t (:foreground ,green :italic t))))
+   `(font-lock-comment-face                       ((t (:foreground ,green :italic nil))))
+   `(font-lock-comment-delimiter-face             ((t (:foreground ,green :italic nil))))
    `(font-lock-doc-face                           ((t (:foreground ,yellow :italic t))))
    `(font-lock-negation-char-face                 ((t (:foreground ,red :weight normal))))
    `(font-lock-preprocessor-face                  ((t (:foreground ,green :weight normal))))
@@ -283,7 +283,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(flycheck-fringe-info                         ((t (:foreground ,purple :weight normal))))
 
 ;;;;; highlight-symbol
-   `(highlight-symbol-face                        ((t (:background "#f0f0dd"))))
+   `(highlight-symbol-face                        ((t (:background ,blue-light))))
 
 ;;;;; highlight-numbers
    `(highlight-numbers-number                     ((t (:foreground ,blue))))

@@ -37,16 +37,16 @@
     ("fg-light"      . "#CCCCB7")
     ("highlight"     . "#e8eb98")
     ("cyan"          . "#007777")
-    ("cyan-light"    . "#98ece8")
+    ("cyan-light"    . "#a8efeb")
     ("red"           . "#880000")
     ("red-light"     . "#f8e8e8")
     ("yellow"        . "#888838")
     ("yellow-light"  . "#f8fce8")
     ("green"         . "#005500")
     ("green-light"   . "#e8fce8")
-    ("blue"          . "#004488")
+    ("blue"          . "#1054af")
     ("blue-light"    . "#e1faff")
-    ("purple"        . "#555598")
+    ("purple"        . "#555599")
     ("purple-light"  . "#ffeaff")))
 
 (defmacro acme/with-color-variables (&rest body)
@@ -76,7 +76,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(fringe                                       ((t (:foreground ,fg :background ,bg))))
    `(line-number                                  ((t (:foreground ,fg :background ,bg-alt2))))
    `(line-number-current-line                     ((t (:foreground ,fg :background ,bg-alt2))))
-   `(header-line                                  ((t (:foreground ,fg :background ,cyan-light :box t))))
+   `(header-line                                  ((t (:foreground ,fg :background ,blue-light :box t))))
    `(highlight                                    ((t (:background ,highlight))))
    `(success                                      ((t (:foreground ,green :weight normal))))
    `(warning                                      ((t (:foreground ,red :weight normal))))
@@ -126,18 +126,18 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(font-lock-keyword-face                       ((t (:foreground ,blue :weight bold)))) ; if, else, for, while, return...
    `(font-lock-type-face                          ((t (:foreground ,fg :weight bold)))) ; int, float, string, void...
    `(font-lock-constant-face                      ((t (:foreground ,fg :weight bold)))) ; NULL, nullptr, true, false...
+   `(font-lock-variable-name-face                 ((t (:foreground ,fg :weight normal))))
    `(font-lock-comment-face                       ((t (:foreground ,green :italic nil))))
    `(font-lock-comment-delimiter-face             ((t (:foreground ,green :italic nil))))
    `(font-lock-doc-face                           ((t (:foreground ,yellow :italic t))))
    `(font-lock-negation-char-face                 ((t (:foreground ,red :weight normal))))
-   `(font-lock-preprocessor-face                  ((t (:foreground ,green :weight normal))))
-   `(font-lock-regexp-grouping-construct          ((t (:foreground ,red :weight normal))))
-   `(font-lock-regexp-grouping-backslash          ((t (:foreground ,red :weight normal))))
-   `(font-lock-variable-name-face                 ((t (:foreground ,fg))))
+   `(font-lock-preprocessor-face                  ((t (:foreground ,red :weight normal))))
+   `(font-lock-regexp-grouping-construct          ((t (:foreground ,purple :weight normal))))
+   `(font-lock-regexp-grouping-backslash          ((t (:foreground ,purple :weight normal))))
    `(font-lock-warning-face                       ((t (:foreground ,red :weight normal))))
 
  ;;;; table
-   `(table-cell                                   ((t (:background ,bg-alt))))
+   `(table-cell                                   ((t (:background ,bg-alt2))))
 
  ;;;; ledger
    `(ledger-font-directive-face                   ((t (:foreground ,cyan))))
@@ -148,7 +148,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ledger-font-payee-uncleared-face             ((t (:foreground ,purple))))
    `(ledger-font-payee-cleared-face               ((t (:foreground ,fg))))
    `(ledger-font-payee-pending-face               ((t (:foreground ,yellow))))
-   `(ledger-font-xact-highlight-face              ((t (:background ,bg-alt))))
+   `(ledger-font-xact-highlight-face              ((t (:background ,bg-alt2))))
 
 ;;;; Third-party
 
@@ -238,9 +238,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(erc-notice-face                              ((t (:foreground ,fg-light))))
    `(erc-highlight-face                           ((t (:background ,highlight))))
 
-   `(erc-input-face                               ((t (:foreground ,fg :background ,bg-alt))))
+   `(erc-input-face                               ((t (:foreground ,fg :background ,bg-alt2))))
    `(erc-current-nick-face                        ((t (:foreground ,fg :background ,cyan-light :weight normal :box (:line-width 1 :style released-button)))))
-   `(erc-nick-default-face                        ((t (:weight normal :background ,bg-alt))))
+   `(erc-nick-default-face                        ((t (:weight normal :background ,bg-alt2))))
    `(erc-my-nick-face                             ((t (:foreground ,fg :background ,cyan-light :weight normal :box (:line-width 1 :style released-button)))))
    `(erc-nick-msg-face                            ((t (:inherit erc-default))))
    `(erc-fool-face                                ((t (:inherit erc-default))))
@@ -283,7 +283,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(flycheck-fringe-info                         ((t (:foreground ,purple :weight normal))))
 
 ;;;;; highlight-symbol
-   `(highlight-symbol-face                        ((t (:background ,blue-light))))
+   `(highlight-symbol-face                        ((t (:background ,bg-alt2))))
 
 ;;;;; highlight-numbers
    `(highlight-numbers-number                     ((t (:foreground ,blue))))
@@ -292,10 +292,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(highlight-operators-face                     ((t (:foreground ,fg))))
 
 ;;;;; hl-line-mode
-   `(hl-line-face                                 ((,class (:background ,highlight)) (t :weight normal)))
+   `(hl-line-face                                 ((,class (:background ,bg-alt2)) (t :weight normal)))
 
 ;;;;; hl-sexp
-   `(hl-sexp-face                                 ((,class (:background ,bg-alt)) (t :weight normal)))
+   `(hl-sexp-face                                 ((,class (:background ,bg-alt2)) (t :weight normal)))
 
 ;;;;; ido-mode
    `(ido-first-match                              ((t (:foreground ,fg :weight normal))))
@@ -312,8 +312,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(indent-guide-face                            ((t (:foreground ,highlight))))
 
 ;;;;; ivy
-   `(ivy-current-match                            ((t (:background ,highlight))))
-   `(ivy-minibuffer-match-face-1                  ((t (:background ,bg-alt))))
+   `(ivy-current-match                            ((t (:background ,blue-light :underline t :extend t))))
+   `(ivy-minibuffer-match-face-1                  ((t (:background ,bg-alt2))))
    `(ivy-minibuffer-match-face-2                  ((t (:background ,cyan-light))))
    `(ivy-minibuffer-match-face-3                  ((t (:background ,purple-light))))
    `(ivy-minibuffer-match-face-3                  ((t (:background ,blue-light))))
@@ -336,8 +336,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(lsp-face-highlight-write                     ((t (:background ,green-light))))
 
 ;;;;; magit
-   `(magit-section-heading                        ((t (:foreground ,cyan :weight normal :underline t))))
-   `(magit-section-highlight                      ((t (:background ,bg-alt))))
+   `(magit-section-heading                        ((t (:foreground ,cyan :background ,blue-light :weight normal :underline t))))
+   `(magit-section-highlight                      ((t (:background ,bg-alt2))))
    `(magit-section-heading-selection              ((t (:background ,highlight))))
    `(magit-filename                               ((t (:foreground ,fg))))
    `(magit-hash                                   ((t (:foreground ,yellow :weight normal))))
@@ -353,22 +353,22 @@ Also bind `class' to ((class color) (min-colors 89))."
                                                                    :weight normal
                                                                    :box (:line-width 1 :color ,cyan)))))
    `(magit-diff-file-heading                      ((t (:foreground ,fg :weight normal))))
-   `(magit-diff-file-heading-highlight            ((t (:background ,bg-alt))))
+   `(magit-diff-file-heading-highlight            ((t (:background ,bg-alt2))))
    `(magit-diff-file-heading-selection            ((t (:foreground ,red :background ,highlight))))
-   `(magit-diff-hunk-heading                      ((t (:foreground ,blue :weight normal :underline t))))
-   `(magit-diff-hunk-heading-highlight            ((t (:background ,blue-light))))
+   `(magit-diff-hunk-heading                      ((t (:foreground ,blue :background ,blue-light :weight normal :underline t))))
+   `(magit-diff-hunk-heading-highlight            ((t (:background ,cyan-light))))
    `(magit-diff-added                             ((t (:foreground ,green :background ,green-light))))
    `(magit-diff-removed                           ((t (:foreground ,red :background ,red-light))))
-   `(magit-diff-context                           ((t (:foreground ,fg-light :background nil))))
+   `(magit-diff-context                           ((t (:foreground ,fg-alt-dark :background nil))))
    `(magit-diff-added-highlight                   ((t (:foreground ,green :background ,green-light))))
    `(magit-diff-removed-highlight                 ((t (:foreground ,red :background ,red-light))))
-   `(magit-diff-context-highlight                 ((t (:foreground ,fg-light :background ,bg-alt))))
+   `(magit-diff-context-highlight                 ((t (:foreground ,fg-alt-dark :background ,bg-alt2))))
    `(magit-diffstat-added                         ((t (:foreground ,green :background ,green-light :weight normal))))
    `(magit-diffstat-removed                       ((t (:foreground ,red :background ,red-light :weight normal))))
    `(magit-log-author                             ((t (:foreground ,blue :weight normal))))
    `(magit-log-date                               ((t (:foreground ,purple :weight normal))))
    `(magit-log-graph                              ((t (:foreground ,red :weight normal))))
-   `(magit-blame-heading                          ((t (:foreground ,fg-light :background ,bg-alt))))
+   `(magit-blame-heading                          ((t (:foreground ,fg-alt-dark :background ,bg-alt2))))
 
 ;;;;; paren-face
    `(parenthesis                                  ((t (:foreground "#CCCCB7"))))
@@ -451,18 +451,18 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-document-info                            ((t (:foreground ,cyan :weight normal))))
    `(org-document-info-keyword                    ((t (:foreground ,cyan))))
    `(org-document-title                           ((t (:foreground ,fg :height 1.5 :weight normal :family "Sans Serif" :underline t))))
-   `(org-todo                                     ((t (:foreground ,yellow :background ,bg-alt :weight normal :box (:line-width 1 :style released-button)))))
+   `(org-todo                                     ((t (:foreground ,yellow :background ,bg-alt2 :weight normal :box (:line-width 1 :style released-button)))))
    `(org-done                                     ((t (:foreground ,green :background ,green-light :weight normal :box (:style released-button)))))
    `(org-date                                     ((t (:foreground ,purple))))
    `(org-table                                    ((t (:foreground ,purple))))
-   `(org-formula                                  ((t (:foreground ,blue :background ,bg-alt))))
-   `(org-code                                     ((t (:foreground ,red :background ,bg-alt))))
-   `(org-verbatim                                 ((t (:foreground ,fg :background ,bg-alt :underline t))))
+   `(org-formula                                  ((t (:foreground ,blue :background ,bg-alt2))))
+   `(org-code                                     ((t (:foreground ,red :background ,bg-alt2))))
+   `(org-verbatim                                 ((t (:foreground ,fg :background ,bg-alt2 :underline t))))
    `(org-special-keyword                          ((t (:foreground ,cyan))))
    `(org-agenda-date                              ((t (:foreground ,cyan))))
    `(org-agenda-structure                         ((t (:foreground ,purple))))
    `(org-block                                    ((t (:foreground ,red))))
-   `(org-block-background                         ((t (:background ,bg-alt))))
+   `(org-block-background                         ((t (:background ,bg-alt2))))
    `(org-block-begin-line                         ((t (:foreground ,fg-alt :background ,bg-dark :italic t))))
    `(org-block-end-line                           ((t (:foreground ,fg-alt :background ,bg-dark :italic t))))
 

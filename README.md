@@ -31,11 +31,13 @@ Download `wilmersdorf-theme.el` and put it under `~/.emacs.d/themes/`
 (load-theme 'acme t) 
 ``` 
 
-#### Screenshots
+#### Screenshot I
+#### Emacs with acme-theme.el
 
 ![alt text](./acme-emacs.png)
 
-#### Comparison with the original Acme editor (Sam has a similar color scheme)
+#### Screenshot II
+#### The original Acme editor (Sam has a similar color scheme)
 
 ![alt text](./acme-og.png)
 

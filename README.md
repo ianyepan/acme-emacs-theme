@@ -12,7 +12,7 @@
 
 <p align="center">An Emacs theme with an old-school vibe</p>
 
-<p align="center">Inspired by Plan 9 Acme</p>
+<p align="center">Inspired by Plan 9 Acme & Sam</p>
 
 <br/>
 <br/>

@@ -33,7 +33,11 @@ Download `wilmersdorf-theme.el` and put it under `~/.emacs.d/themes/`
 
 #### Screenshots
 
-![alt text](./acme.png)
+![alt text](./acme-emacs.png)
+
+#### Comparison with the original Acme editor (Sam has a similar color scheme)
+
+![alt text](./acme-og.png)
 
 Copyright© 2020 Ian Y.E. Pan
 

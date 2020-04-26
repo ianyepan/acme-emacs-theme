@@ -36,7 +36,7 @@ Download `wilmersdorf-theme.el` and put it under `~/.emacs.d/themes/`
 
 ![alt text](./acme-emacs.png)
 
-#### Screenshot II
+#### Screenshot II (for comparison)
 #### The original Acme editor (Sam has a similar color scheme)
 
 ![alt text](./acme-og.png)

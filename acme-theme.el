@@ -129,7 +129,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(font-lock-variable-name-face                 ((t (:foreground ,fg :weight normal))))
    `(font-lock-comment-face                       ((t (:foreground ,green :italic nil))))
    `(font-lock-comment-delimiter-face             ((t (:foreground ,green :italic nil))))
-   `(font-lock-doc-face                           ((t (:foreground ,yellow :italic t))))
+   `(font-lock-doc-face                           ((t (:foreground ,yellow :italic nil))))
    `(font-lock-negation-char-face                 ((t (:foreground ,red :weight normal))))
    `(font-lock-preprocessor-face                  ((t (:foreground ,red :weight normal))))
    `(font-lock-regexp-grouping-construct          ((t (:foreground ,purple :weight normal))))
@@ -256,31 +256,17 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(flx-highlight-face                           ((t (:foreground ,yellow :background ,green-light :weight normal :underline t))))
 
 ;;;;; company
-   `(company-tooltip                              ((t (:background ,green-light))))
+   `(company-tooltip                              ((t (:background ,blue-light))))
    `(company-tooltip-selection                    ((t (:background ,cyan-light))))
-   `(company-tooltip-common-selection             ((t (:background ,cyan-light))))
+   `(company-tooltip-common-selection             ((t (:foreground ,blue :background ,cyan-light :bold t))))
    `(company-tooltip-mouse                        ((t (:background ,blue-light))))
    `(company-tooltip-search                       ((t (:foreground ,red))))
-   `(company-tooltip-common                       ((t (:foreground ,red :background ,green-light))))
-   `(company-tooltip-annotation                   ((t (:foreground ,green :background ,green-light))))
+   `(company-tooltip-common                       ((t (:foreground ,blue :bold t))))
+   `(company-tooltip-annotation                   ((t (:foreground ,yellow)))) ; parameter hints etc.
    `(company-scrollbar-fg                         ((t (:background ,cyan))))
-   `(company-scrollbar-bg                         ((t (:background ,green-light))))
+   `(company-scrollbar-bg                         ((t (:background ,cyan-light))))
    `(company-preview                              ((t (:foreground ,fg :background ,cyan-light))))
    `(company-preview-common                       ((t (:foreground ,fg :background ,cyan-light))))
-
-;;;;; flycheck
-   `(flycheck-error                               ((((supports :underline (:style wave)))
-                                                    (:underline (:style wave :color ,red) :inherit unspecified))
-                                                   (t (:foreground ,red :weight normal :underline t))))
-   `(flycheck-warning                             ((((supports :underline (:style wave)))
-                                                    (:underline (:style wave :color ,yellow) :inherit unspecified))
-                                                   (t (:foreground ,yellow :weight normal :underline t))))
-   `(flycheck-info                                ((((supports :underline (:style wave)))
-                                                    (:underline (:style wave :color ,purple) :inherit unspecified))
-                                                   (t (:foreground ,purple :weight normal :underline t))))
-   `(flycheck-fringe-error                        ((t (:foreground ,red :weight normal))))
-   `(flycheck-fringe-warning                      ((t (:foreground ,yellow :weight normal))))
-   `(flycheck-fringe-info                         ((t (:foreground ,purple :weight normal))))
 
 ;;;;; highlight-symbol
    `(highlight-symbol-face                        ((t (:background ,bg-alt2))))
@@ -439,9 +425,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(yascroll:thumb-fringe                        ((t (:background ,bg :foreground ,bg :box (:line-width 1 :style released-button)))))
 
 ;;;;; Org
-   `(org-level-1                                  ((t (:background ,blue-light :foreground, blue :weight bold :overline t))))
-   `(org-level-2                                  ((t (:background ,blue-light :foreground, cyan :weight bold :overline t))))
-   `(org-level-3                                  ((t (:background ,blue-light :foreground, blue :weight bold :overline t))))
+   `(org-level-1                                  ((t (:background ,blue-light :foreground ,blue :weight bold :overline t))))
+   `(org-level-2                                  ((t (:background ,blue-light :foreground ,cyan :weight bold :overline t))))
+   `(org-level-3                                  ((t (:background ,blue-light :foreground ,blue :weight bold :overline t))))
    `(org-level-4                                  ((t (:background ,blue-light :foreground ,cyan))))
    `(org-level-5                                  ((t (:background ,blue-light :foreground ,blue))))
    `(org-level-6                                  ((t (:background ,blue-light :foreground ,cyan))))

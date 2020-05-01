@@ -257,7 +257,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(company-tooltip-mouse                        ((t (:background ,blue-light))))
    `(company-tooltip-search                       ((t (:foreground ,red))))
    `(company-tooltip-common                       ((t (:foreground ,blue :bold t))))
-   `(company-tooltip-annotation                   ((t (:foreground ,yellow)))) ; parameter hints etc.
+   `(company-tooltip-annotation                   ((t (:foreground ,yellow :italic t)))) ; parameter hints etc.
+   `(company-tooltip-annotation-selection         ((t (:foreground ,yellow :italic t))))
    `(company-scrollbar-fg                         ((t (:background ,cyan))))
    `(company-scrollbar-bg                         ((t (:background ,cyan-light))))
    `(company-preview                              ((t (:foreground ,fg :background ,cyan-light))))
@@ -271,6 +272,9 @@ Also bind `class' to ((class color) (min-colors 89))."
 
 ;;;;; highlight-operators
    `(highlight-operators-face                     ((t (:foreground ,fg))))
+
+;;;;; hl-todo
+   `(hl-todo                                      ((t (:inverse-video t))))
 
 ;;;;; hl-line-mode
    `(hl-line-face                                 ((,class (:background ,bg-alt2)) (t :weight normal)))

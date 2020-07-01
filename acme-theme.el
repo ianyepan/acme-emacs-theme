@@ -3,7 +3,7 @@
 ;; Copyright (C) 2020 Ian Yi-En Pan
 
 ;; Author: Ian Y.E. Pan
-;; URL: https://github.com/ianpan870102/vscode-dark-plus-emacs-theme
+;; URL: https://github.com/ianpan870102/acme-emacs-theme
 ;; Version: 1.0.0
 
 ;; This program is free software; you can redistribute it and/or modify

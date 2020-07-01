@@ -1,12 +1,14 @@
 <h3 align="center">Acme Emacs Theme</h3>
 <hr/>
 
+
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/EmacsIcon.svg/120px-EmacsIcon.svg.png" />
 </p>
 
 <p align="center">
 <a href="https://github.com/ianpan870102/wilmersdorf-emacs-theme"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance"></a>
+<a href="https://github.com/ianpan870102/acme-emacs-theme"><img src="https://img.shields.io/github/release/ianpan870102/acme-emacs-theme" alt="Version"></a>
 <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="GPL License"></a>
 </p>
 
@@ -23,13 +25,13 @@ Download `acme-theme.el` and put it under `~/.emacs.d/themes/`
 (or `~/.config/emacs/themes/`), then add these lines to your
 `init.el`:
 
-``` 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") 
+```
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 # or
 (add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
 
-(load-theme 'acme t) 
-``` 
+(load-theme 'acme t)
+```
 
 #### Screenshot I
 #### Emacs with acme-theme.el

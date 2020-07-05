@@ -40,7 +40,7 @@
     (fg-alt          "#B8B09A")
     (fg-alt-dark     "#988d6d")
     (fg-light        "#CCCCB7")
-    (highlight       "#e8eb98")
+    (highlight       "#e8ebc8")
 
     ;; standardized palette
     (acme-cyan            "#007777")
@@ -482,7 +482,8 @@
   `(message-cited-text                           ((t (:inherit font-lock-comment-face))))
 
 ;;;;; fill-column-indicator
-  `(fci-rule-color                               ((t (:foreground ,highlight))))))
+  `(fci-rule-color                               ((t (:foreground ,highlight))))
+  `(fill-column-indicator                        ((t (:foreground ,highlight))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)

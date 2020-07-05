@@ -1,9 +1,9 @@
-;;; acme-theme.el --- A color theme based on Acme & Sam from Plan 9
+;;; acme-theme.el --- A color theme based on Acme & Sam from Plan 9  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020 Ian Yi-En Pan
 
 ;; Author: Ian Y.E. Pan
-;; URL: https://github.com/ianpan870102/vscode-dark-plus-emacs-theme
+;; URL: https://github.com/ianpan870102/acme-emacs-theme
 ;; Version: 1.0.0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -27,7 +27,7 @@
 
 ;;; Code:
 
-(deftheme acme "Theme inspired by Acme")
+(deftheme acme "A color theme based on Acme & Sam")
 
 ;;; Color Palette
 
@@ -519,7 +519,6 @@ Also bind `class' to ((class color) (min-colors 89))."
 (provide 'acme-theme)
 
 ;; Local Variables:
-;; no-byte-compile: t
 ;; indent-tabs-mode: nil
 ;; End:
 ;;; acme-theme.el ends here

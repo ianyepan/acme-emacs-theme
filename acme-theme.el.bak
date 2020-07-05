@@ -31,40 +31,50 @@
 
 ;;; Color Palette
 
-(let ((class '((class color) (min-colors 89)))
-    (bg              "#FFFFE8") ; default bg
-    ;; (bg-alt          "#FFFFD8")
-    (bg-alt2         "#eFeFd8")
-    (bg-dark         "#E5E5D0")
-    (fg              "#444444") ; default fg
-    (fg-alt          "#B8B09A")
-    (fg-alt-dark     "#988d6d")
-    (fg-light        "#CCCCB7")
-    (highlight       "#e8eb98")
+(defvar acme-theme-colors-alist
+  '(("bg"            . "#FFFFE8") ; default bg
+    ("bg-alt"        . "#FFFFD8")
+    ("bg-alt2"       . "#eFeFd8")
+    ("bg-dark"       . "#E5E5D0")
+    ("fg"            . "#444444") ; default fg
+    ("fg-alt"        . "#B8B09A")
+    ("fg-alt-dark"   . "#988d6d")
+    ("fg-light"      . "#CCCCB7")
+    ("highlight"     . "#e8eb98")
 
-    ;; standardized palette
-    (acme-cyan            "#007777")
-    (acme-cyan-light      "#a8efeb")
-    (acme-red             "#880000")
-    (acme-red-light       "#f8e8e8")
-    (acme-yellow          "#888838")
-    (acme-yellow-light    "#f8fce8")
-    (acme-green           "#005500")
-    (acme-green-alt       "#006600")
-    (acme-green-light     "#e8fce8")
-    (acme-blue            "#1054af")
-    (acme-blue-light      "#e1faff")
-    (acme-purple          "#555599")
-    (acme-purple-light    "#ffeaff"))
+    ("acme-cyan"          . "#007777")
+    ("acme-cyan-light"    . "#a8efeb")
+    ("acme-red"           . "#880000")
+    ("acme-red-light"     . "#f8e8e8")
+    ("acme-yellow"        . "#888838")
+    ("acme-yellow-light"  . "#f8fce8")
+    ("acme-green"         . "#005500")
+    ("acme-green-alt"     . "#006600")
+    ("acme-green-light"   . "#e8fce8")
+    ("acme-blue"          . "#1054af")
+    ("acme-blue-light"    . "#e1faff")
+    ("acme-purple"        . "#555599")
+    ("acme-purple-light"  . "#ffeaff")))
+
+(defmacro acme-theme-with-color-variables (&rest body)
+  "`let' bind all colors defined in `acme-theme-colors-alist' around BODY.
+Also bind `class' to ((class color) (min-colors 89))."
+  (declare (indent 0))
+  `(let ((class '((class color) (min-colors 89)))
+         ,@(mapcar (lambda (cons)
+                     (list (intern (car cons)) (cdr cons)))
+                   acme-theme-colors-alist))
+     ,@body))
 
 ;;; Theme Faces
-(custom-theme-set-faces
+(acme-theme-with-color-variables
+ (custom-theme-set-faces
   'acme
 
 ;;;; Built-in
 
 ;;;;; basic coloring
-  `(button                                       ((t (:underline t))))
+  '(button                                       ((t (:underline t))))
   `(link                                         ((t (:foreground ,acme-blue :underline t :weight normal))))
   `(link-visited                                 ((t (:foreground ,acme-purple :underline t :weight normal))))
   `(default                                      ((t (:foreground ,fg :background ,bg))))
@@ -479,10 +489,26 @@
   `(message-header-to                            ((t (:foreground ,acme-blue))))
   `(message-header-subject                       ((t (:foreground ,acme-blue))))
   `(message-header-other                         ((t (:foreground ,acme-blue))))
-  `(message-cited-text                           ((t (:inherit font-lock-comment-face))))
+  `(message-cited-text                           ((t (:inherit font-lock-comment-face))))))
+
+;;; Theme Variables
+(acme-theme-with-color-variables
+ (custom-theme-set-variables
+  'acme
 
 ;;;;; fill-column-indicator
-  `(fci-rule-color                               ((t (:foreground ,highlight))))))
+  `(fci-rule-color ,acme-yellow-light)
+
+;;;;; highlight-parentheses
+  `(hl-paren-colors '(,acme-green ,acme-blue ,acme-red))
+  `(hl-paren-background-colors '(,acme-green-light ,acme-blue-light ,acme-red-light))
+
+;;;;; sml-mode-line
+  `(sml/active-foreground-color ,fg)
+  `(sml/active-background-color ,acme-blue-light)
+  `(sml/inactive-foreground-color ,fg)
+  `(sml/inactive-background-color ,acme-blue)))
+
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)

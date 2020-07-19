@@ -212,7 +212,7 @@
 ;;;;; elfeed
   `(elfeed-search-date-face                      ((t (:foreground ,acme-blue))))
   `(elfeed-search-title-face                     ((t (:foreground ,fg))))
-  `(elfeed-search-unread-title-facee             ((t (:foreground ,fg))))
+  `(elfeed-search-unread-title-face              ((t (:foreground ,fg))))
   `(elfeed-search-feed-face                      ((t (:foreground ,acme-green))))
   `(elfeed-search-tag-face                       ((t (:foreground ,acme-red))))
   `(elfeed-search-unread-count-face              ((t (:foreground ,fg))))

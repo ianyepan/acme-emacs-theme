@@ -21,24 +21,20 @@
 
 #### Installation
 
-Download `acme-theme.el` and put it under `~/.emacs.d/themes/`
-(or `~/.config/emacs/themes/`), then add these lines to your
-`init.el`:
+`acme-theme` is now on MELPA as a package (as of 19. June. 2020)! An example use-package declaration:
 
-```
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-# or
-(add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
-
-(load-theme 'acme t)
+```emacs-lisp
+(use-package acme-theme
+  :config
+  (load-theme 'acme t))
 ```
 
-#### Screenshot I
+#### Screenshot 1
 #### Emacs with acme-theme.el
 
 ![alt text](./acme-emacs.png)
 
-#### Screenshot II (for comparison)
+#### Screenshot 2 (for comparison)
 #### The original Acme editor (Sam has a similar color scheme)
 
 ![alt text](./acme-og.png)

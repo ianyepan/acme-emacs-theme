@@ -448,10 +448,10 @@
   `(org-special-keyword                          ((t (:foreground ,acme-cyan))))
   `(org-agenda-date                              ((t (:foreground ,acme-cyan))))
   `(org-agenda-structure                         ((t (:foreground ,acme-purple))))
-  `(org-block                                    ((t (:foreground ,fg :background ,bg-alt2))))
-  `(org-block-background                         ((t (:background ,bg-alt2))))
-  `(org-block-begin-line                         ((t (:foreground ,fg-alt :background ,bg-dark :italic t))))
-  `(org-block-end-line                           ((t (:foreground ,fg-alt :background ,bg-dark :italic t))))
+  `(org-block                                    ((t (:foreground ,fg :background ,bg-alt2 :extend t))))
+  `(org-block-background                         ((t (:background ,bg-alt2 :extend t))))
+  `(org-block-begin-line                         ((t (:foreground ,fg-alt :background ,bg-dark :italic t :extend t))))
+  `(org-block-end-line                           ((t (:foreground ,fg-alt :background ,bg-dark :italic t :extend t))))
 
 ;;;;; origami
   `(origami-fold-replacement-face                ((t (:foreground ,acme-red :background ,acme-red-light

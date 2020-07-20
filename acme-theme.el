@@ -121,7 +121,7 @@
 
    `(menu                                         ((t (:foreground ,bg :background ,fg))))
    `(minibuffer-prompt                            ((t (:foreground ,fg :weight normal))))
-   `(region                                       ((,class (:background ,highlight :foreground ,fg)) (t :inverse-video t)))
+   `(region                                       ((,class (:foreground ,fg :background ,highlight))))
    `(secondary-selection                          ((t (:background ,acme-green-light))))
    `(trailing-whitespace                          ((t (:background ,acme-red-light))))
    `(vertical-border                              ((t (:foreground ,acme-cyan))))
@@ -284,10 +284,10 @@
    `(hl-todo                                      ((t (:inverse-video t))))
 
 ;;;;; hl-line-mode
-   `(hl-line-face                                 ((,class (:background ,bg-alt)) (t :weight normal)))
+   `(hl-line                                      ((,class (:background ,bg-alt)))))
 
 ;;;;; hl-sexp
-   `(hl-sexp-face                                 ((,class (:background ,bg-alt)) (t :weight normal)))
+   `(hl-sexp-face                                 ((,class (:background ,bg-alt)))))
 
 ;;;;; ido-mode
    `(ido-first-match                              ((t (:foreground ,fg :weight normal))))

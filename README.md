@@ -29,6 +29,14 @@
   (load-theme 'acme t))
 ```
 
+#### Customization options:
+
+1. Setting `acme-theme-black-fg` to `t` turns the foreground into pure black instead of the default dark grey.
+
+```emacs-lisp
+(setq acme-theme-black-fg t)
+```
+
 #### Screenshot 1
 #### Emacs with acme-theme.el
 

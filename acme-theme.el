@@ -78,6 +78,7 @@
   `(highlight                                    ((t (:background ,highlight))))
   `(success                                      ((t (:foreground ,acme-green :weight normal))))
   `(warning                                      ((t (:foreground ,acme-red :weight normal))))
+  `(error                                        ((t (:foreground ,acme-red :bold t))))
 
 ;;;;; compilation
   `(compilation-column-face                      ((t (:foreground ,acme-yellow :background ,acme-yellow-light))))
@@ -481,6 +482,17 @@
   `(message-header-subject                       ((t (:foreground ,acme-blue))))
   `(message-header-other                         ((t (:foreground ,acme-blue))))
   `(message-cited-text                           ((t (:inherit font-lock-comment-face))))
+
+;;;;; term-mode (vterm too)
+  `(term                                         ((,class (:foreground ,fg :background ,bg))))
+  `(term-color-black                             ((,class (:foreground ,fg :background ,fg))))
+  `(term-color-blue                              ((,class (:foreground ,acme-blue :background ,acme-blue))))
+  `(term-color-red                               ((,class (:foreground ,acme-red :background ,acme-red))))
+  `(term-color-green                             ((,class (:foreground ,acme-green :background ,acme-green))))
+  `(term-color-yellow                            ((,class (:foreground ,acme-yellow :background ,acme-yellow))))
+  `(term-color-magenta                           ((,class (:foreground ,acme-purple :background ,acme-purple))))
+  `(term-color-cyan                              ((,class (:foreground ,acme-cyan :background ,acme-cyan))))
+  `(term-color-white                             ((,class (:foreground ,fg :background ,fg))))
 
 ;;;;; fill-column-indicator
   `(fci-rule-color                               ((t (:foreground ,highlight-alt))))

@@ -284,10 +284,10 @@
    `(hl-todo                                      ((t (:inverse-video t))))
 
 ;;;;; hl-line-mode
-   `(hl-line                                      ((,class (:background ,bg-alt)))))
+   `(hl-line                                      ((,class (:background ,bg-alt))))
 
 ;;;;; hl-sexp
-   `(hl-sexp-face                                 ((,class (:background ,bg-alt)))))
+   `(hl-sexp-face                                 ((,class (:background ,bg-alt))))
 
 ;;;;; ido-mode
    `(ido-first-match                              ((t (:foreground ,fg :weight normal))))

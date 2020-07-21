@@ -287,7 +287,7 @@
    `(hl-line                                      ((,class (:background ,bg-alt)))))
 
 ;;;;; hl-sexp
-   `(hl-sexp-face                                 ((,class (:background ,bg-alt)))))
+   `(hl-sexp-face                                 ((,class (:background ,bg-alt))))
 
 ;;;;; ido-mode
    `(ido-first-match                              ((t (:foreground ,fg :weight normal))))
@@ -504,7 +504,7 @@
 
 ;;;;; fill-column-indicator
    `(fci-rule-color                               ((t (:foreground ,highlight-alt))))
-   `(fill-column-indicator                        ((t (:foreground ,highlight-alt))))))
+   `(fill-column-indicator                        ((t (:foreground ,highlight-alt)))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)

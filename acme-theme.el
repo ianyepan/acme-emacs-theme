@@ -74,7 +74,8 @@
 
 ;;;;; basic coloring
    `(button                                       ((t (:underline t))))
-   `(link                                         ((t (:foreground ,acme-blue :underline t :weight normal))))
+   `(link                                         ((t (:foreground "#0066cc":weight normal))))
+   `(highlight                                    ((t (:inherit link :underline t)))) ; link hover
    `(link-visited                                 ((t (:foreground ,acme-purple :underline t :weight normal))))
    `(default                                      ((t (:foreground ,fg :background ,bg))))
    `(cursor                                       ((t (:foreground ,bg :background ,fg))))
@@ -83,7 +84,6 @@
    `(line-number                                  ((t (:foreground ,fg :background ,bg-alt))))
    `(line-number-current-line                     ((t (:foreground ,fg :background ,bg-alt))))
    `(header-line                                  ((t (:foreground ,fg :background ,acme-blue-light :box t))))
-   `(highlight                                    ((t (:background ,highlight))))
    `(success                                      ((t (:foreground ,acme-green :weight normal))))
    `(warning                                      ((t (:foreground ,acme-red :weight normal))))
    `(error                                        ((t (:foreground ,acme-red :bold t))))

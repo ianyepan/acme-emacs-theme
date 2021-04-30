@@ -121,7 +121,7 @@
 
    `(menu                                         ((t (:foreground ,bg :background ,fg))))
    `(minibuffer-prompt                            ((t (:foreground ,fg :weight normal))))
-   `(region                                       ((,class (:foreground ,fg :background ,highlight))))
+   `(region                                       ((,class (:foreground ,fg :background ,highlight :extend nil))))
    `(secondary-selection                          ((t (:background ,acme-green-light))))
    `(trailing-whitespace                          ((t (:background ,acme-red-light))))
    `(vertical-border                              ((t (:foreground ,acme-cyan))))

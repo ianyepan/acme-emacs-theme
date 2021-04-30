@@ -31,23 +31,29 @@
 
 #### Customization options:
 
-1. Setting `acme-theme-black-fg` to `t` turns the foreground into pure black instead of the default dark grey.
+1. Setting `acme-theme-black-fg` to `t` turns the foreground into pure black instead of the default dark gray.
 
 ```emacs-lisp
 (setq acme-theme-black-fg t)
 ```
 
-#### Screenshot 1
+#### Screenshots
 #### Emacs with acme-theme.el
 
-![alt text](./acme-emacs.png)
+![alt text](./screenshots/cpp.png)
 
-#### Screenshot 2 (for comparison)
+<br/>
+
+![alt text](./screenshots/packages.png)
+
+<br/>
+<br/>
+
 #### The original Acme editor (Sam has a similar color scheme)
 
-![alt text](./acme-og.png)
+![alt text](./screenshots/acme-og.png)
 
-Copyright© 2020 Ian Y.E. Pan
+Copyright© 2020-2021 Ian Y.E. Pan
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

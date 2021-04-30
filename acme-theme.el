@@ -260,15 +260,10 @@
 ;;;;; company
    `(company-tooltip                              ((t (:background ,acme-blue-light))))
    `(company-tooltip-selection                    ((t (:background ,acme-cyan-light))))
-   `(company-tooltip-common-selection             ((t (:foreground ,acme-blue :background ,acme-cyan-light :bold t))))
-   `(company-tooltip-mouse                        ((t (:background ,acme-blue-light))))
-   `(company-tooltip-search                       ((t (:foreground ,acme-red))))
    `(company-tooltip-common                       ((t (:foreground ,acme-blue :bold t))))
    `(company-tooltip-annotation                   ((t (:foreground ,acme-yellow :italic t)))) ; parameter hints etc.
-   `(company-tooltip-annotation-selection         ((t (:foreground ,acme-yellow :italic t))))
    `(company-scrollbar-fg                         ((t (:background ,acme-cyan))))
    `(company-scrollbar-bg                         ((t (:background ,acme-cyan-light))))
-   `(company-preview                              ((t (:foreground ,fg :background ,acme-cyan-light))))
    `(company-preview-common                       ((t (:foreground ,fg :background ,acme-cyan-light))))
 
 ;;;;; highlight-symbol
